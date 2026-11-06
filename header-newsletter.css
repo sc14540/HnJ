@@ -1,27 +1,31 @@
 /* Shared HnJ logo header and newsletter layout */
 .site-header{overflow:visible}
-.header-signup-bar{background:#c4cdae;min-height:76px}
-.header-signup-inner{min-height:76px;display:flex;align-items:center;justify-content:flex-end;gap:24px}
+.header-signup-bar{background:#c4cdae;min-height:92px}
+.header-signup-inner{min-height:92px;display:flex;align-items:center;justify-content:flex-end;gap:24px}
 .header-note{font:500 14px var(--sans);color:var(--olive-dark)}
 #header-signup-form{width:min(470px,55%)}
+.header-email-form .email-field{height:82px;min-height:82px}
+.header-email-form .email-field input{margin-top:18px}
+.header-signup-inner .header-email-form .button{align-self:center}
 .header-email-form{border:0;border-radius:0;background:transparent;padding:0;gap:10px}
 .header-email-form input{background:#fff;padding:13px 15px;font-size:14px}
 .header-email-form .button,.newsletter-email-form .button{border-radius:2px;padding:12px 22px;background:var(--olive);font-size:14px}
 .nav-wrap{height:112px;position:relative;justify-content:center}
-.nav-wrap .brand{position:absolute;left:0;top:-62px;z-index:2;display:block;width:190px;height:178px}
+.nav-wrap .brand{position:absolute;left:0;top:29px;z-index:2;display:block;width:245px;height:50px}
 .nav-wrap .brand img{width:100%;height:100%;object-fit:contain;display:block}
-.nav-wrap .nav-links{display:flex;align-items:center;justify-content:center;gap:clamp(26px,5vw,62px);margin-left:180px;height:100%;font-size:16px;color:var(--olive)}
+.nav-wrap .nav-links{display:flex;align-items:center;justify-content:center;gap:clamp(26px,5vw,62px);margin-left:225px;height:100%;font-size:16px;color:var(--olive)}
 .nav-wrap .nav-links a{height:100%;display:flex;align-items:center;position:relative;color:var(--olive)}
 .nav-wrap .nav-links a[aria-current=page]:after{content:"";position:absolute;bottom:20px;left:0;right:0;height:2px;background:var(--olive)}
 .nav-wrap .menu-toggle{display:none}
-.footer-logo{display:inline-block;width:126px;height:118px}
+.footer-logo{display:inline-block;width:220px;height:48px}
 .footer-logo img{width:100%;height:100%;object-fit:contain;display:block}
 .footer-brand p{max-width:280px}
-.newsletter-page{min-height:calc(100vh - 188px);background:#d9e1d2;display:grid;place-items:center;padding:82px 24px 96px}
+.newsletter-page{min-height:calc(100vh - 204px);background:#d9e1d2;display:grid;place-items:center;padding:82px 24px 96px}
 .newsletter-content{width:min(840px,100%);text-align:center;color:var(--olive);margin:auto}
 .newsletter-promise{max-width:760px;margin:0 auto 38px;font:500 clamp(26px,3.1vw,38px)/1.4 var(--display);letter-spacing:-.8px}
 .newsletter-free{font:500 clamp(22px,2.4vw,30px) var(--display);margin-bottom:50px}
 .newsletter-email-form{max-width:715px;margin:0 auto;gap:12px;border:0;border-radius:0;background:transparent;padding:0}
+.newsletter-email-form .email-field{min-height:76px}
 .newsletter-email-form input{background:#fff;padding:15px 16px;font-size:17px}
 .newsletter-email-form .button{font-size:17px;padding:14px 25px}
 .newsletter-privacy{margin:42px auto 0;font:400 clamp(16px,2vw,23px)/1.55 var(--sans);color:var(--olive);max-width:720px}
@@ -33,27 +37,37 @@
 .newsletter-free{font-size:clamp(18px,1.85vw,21px)}
 .newsletter-privacy{font-size:clamp(14px,1.32vw,15px)}
 .newsletter-privacy strong{font-weight:400;margin-top:0}
+.email-form .button{transition:none;align-self:flex-start;flex:0 0 auto}
+.email-form .button:hover{transform:none;background:var(--olive)}
+.email-field{flex:1;min-width:0;display:flex;flex-direction:column;align-items:stretch}
+.email-field input{width:100%;flex:initial}
+.email-error{display:block;margin:5px 12px 0;color:#a13d36;font-size:12px;line-height:1.3;text-align:left}
+.email-error[hidden]{display:none}
 @media(max-width:760px){
- .header-signup-bar{min-height:64px}
- .header-signup-inner{min-height:64px;width:calc(100% - 28px);gap:0}
+ .header-signup-bar{min-height:80px}
+ .header-signup-inner{min-height:80px;width:calc(100% - 28px);gap:0}
  .header-note{display:none}
  #header-signup-form{width:100%;max-width:500px;margin-left:auto}
  .header-email-form{display:flex;flex-direction:row;padding:0;gap:7px}
  .header-email-form input{padding:9px 11px;font-size:12px}
+ .header-email-form .email-field{height:64px;min-height:64px}
+ .header-email-form .email-field input{margin-top:14px}
+ .header-email-form .button{align-self:center}
+ .header-email-form .email-error{font-size:10px;margin:3px 4px 0}
  .header-email-form .button{padding:8px 12px;font-size:12px}
  .nav-wrap{height:78px;justify-content:space-between}
- .nav-wrap .brand{left:0;top:-25px;width:110px;height:101px}
+ .nav-wrap .brand{left:0;top:20px;width:180px;height:38px}
  .nav-wrap .menu-toggle{display:block;position:relative;z-index:5}
  .nav-wrap .nav-links{display:none;position:absolute;top:78px;left:-18px;right:-18px;height:auto;margin:0;padding:18px 24px 22px;background:#fff;box-shadow:0 15px 22px #1f34200c;flex-direction:column;align-items:flex-start;gap:0}
  .nav-wrap .nav-links.open{display:flex}
  .nav-wrap .nav-links a{height:auto;padding:11px 0;width:100%}
  .nav-wrap .nav-links a[aria-current=page]:after{bottom:4px;right:auto;width:50px}
- .newsletter-page{min-height:calc(100vh - 142px);padding:60px 22px 72px}
+ .newsletter-page{min-height:calc(100vh - 158px);padding:60px 22px 72px}
  .newsletter-promise{margin-bottom:28px}
  .newsletter-free{margin-bottom:34px}
  .newsletter-email-form{flex-direction:column;padding:0}
  .newsletter-email-form input{width:100%;font-size:15px}
  .newsletter-email-form .button{width:100%;font-size:15px}
  .newsletter-privacy{margin-top:30px}
- .footer-logo{width:98px;height:92px}
+ .footer-logo{width:190px;height:42px}
 }
